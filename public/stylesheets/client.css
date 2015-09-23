@@ -1,0 +1,19 @@
+#client {
+    /*width:1000px;*/
+    /*height:100px;*/
+    /*overflow:hidden;*/
+    /*position:absolute;*/
+    /*background-color:transparent;*/
+}
+
+.move-button {
+	color:#fff !important;
+	font-size:15px;
+	text-transform: uppercase;
+}
+
+.move-button:hover, .move-button:active {
+	background: #fff;
+	color:#000 !important;
+	cursor: pointer;
+}

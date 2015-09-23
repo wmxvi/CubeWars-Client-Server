@@ -1,0 +1,52 @@
+extends ../include/layout
+block content
+    #notify
+    #topMenu(style='width:100%;background:#333;color:#fff;padding:10px;')
+        span() CubeWars
+        span(style='margin-left:10px;') [ #{session.account.username} ] &nbsp;
+            a(href='/logout')
+                strong Logout
+    <!-- Networking -->
+    script(type='text/javascript', src='http://localhost:8000/socket.io/socket.io.js')
+
+    <!-- Graphics -->
+    script(type='text/javascript', src='/javascript/client/lib/tweenjs/tweenjs-0.6.1.combined.js')
+    script(type='text/javascript', src='/javascript/client/lib/threejs/three.js')
+    script(type='text/javascript', src='/javascript/client/lib/threejs/THREE.TrackballControls.js')
+    script(type='text/javascript', src='/javascript/client/lib/threejs/THREEx.KeyboardState.js')
+
+    <!-- Physics -->
+    script(type='text/javascript', src='/javascript/client/lib/physijs/physi.js')
+
+    <!-- Core client code -->
+    script(type='text/javascript', src='/javascript/client/netHandler.js')
+    script(type='text/javascript', src='/javascript/client/assetLoader.js')
+    script(type='text/javascript', src='/javascript/client/objectManager.js')
+    script(type='text/javascript', src='/javascript/client/worldMap.js')
+    script(type='text/javascript', src='/javascript/client/player.js')
+    script(type='text/javascript', src='/javascript/client/client.js')
+    script(type='text/javascript', src='/javascript/client/main.js')
+
+    #client(data-token='#{session.account.playerId}')
+        div(style='position:absolute;top:35px;left:15px;color:#fff;')
+            p
+                strong Health:
+                span.label-health
+                span &nbsp;/&nbsp;
+                span.label-max-health 
+            p 
+                strong Energy: &nbsp;
+                span.label-energy
+                span %
+            p 
+                strong Level:
+                span.label-level
+            p 
+                strong Points: #{session.account.points}
+        div(style='position:absolute;top:35px;right:15px;color:#fff;')
+            p Position X: &nbsp;
+                span.label-position-x
+            p Position Y: &nbsp;
+                span.label-position-y
+            p Position Z: &nbsp;
+                span.label-position-z

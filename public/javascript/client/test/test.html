@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	  <meta charset="utf-8">
+	  <title>CubeWars Client Tests</title>
+	  <link rel="stylesheet" media="all" href="mocha.css">
+	</head>
+	<body>
+		<div id="mocha"><p><a href=".">Index</a></p></div>
+	  	<div id="messages"></div>
+	  	<div id="fixtures"></div>
+	  	
+	  	<!-- Libs -->
+	  	<script src="mocha.js"></script>
+	  	<script src="chai.js"></script>
+	  	<script src='/javascript/jquery/jquery.min.js'></script>
+
+	  	<!-- CubeWars Files -->
+
+		<!-- Networking -->
+		<script type='text/javascript' src='http://localhost:8000/socket.io/socket.io.js'></script>
+
+		<!-- Graphics -->
+		<script type='text/javascript' src='/javascript/client/lib/tweenjs/tweenjs-0.6.1.combined.js'></script>
+		<script type='text/javascript' src='/javascript/client/lib/threejs/three.js'></script>
+		<script type='text/javascript' src='/javascript/client/lib/threejs/THREE.TrackballControls.js'></script>
+		<script type='text/javascript' src='/javascript/client/lib/threejs/THREEx.KeyboardState.js'></script>
+
+		<!-- Physics -->
+	  	<script type='text/javascript' src='/javascript/client/lib/physijs/physi.js'></script>
+
+	  	<script type='text/javascript' src='../netHandler.js'></script>
+	  	<script type='text/javascript' src='../assetLoader.js'></script>
+	  	<script type='text/javascript' src='../objectManager.js'></script>
+	  	<script type='text/javascript' src='../worldMap.js'></script>
+	  	<script type='text/javascript' src='../player.js'></script>
+	  	<script type='text/javascript' src='../client.js'></script>
+	  	<script type='text/javascript' src='../main.js'></script>
+
+	  	<!-- Run Tests -->
+
+	  	<script>mocha.setup('bdd')</script>
+	  	<script src="TestAssetLoader.js"></script>
+	  	<script src="TestNetHandler.js"></script>
+	  	<script src="TestObjectManager.js"></script>
+	  	<script src="TestPlayer.js"></script>
+	  	<script src="TestWorldMap.js"></script>
+	  	<script>mocha.run();</script>
+	</body>
+</html>

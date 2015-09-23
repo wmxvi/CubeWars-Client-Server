@@ -1,0 +1,12 @@
+extends include/layout
+block content
+    #container
+        #logo
+        #loginBox
+            form(action='/login', method='POST', id='login')
+                input(type='email', name='loginEmailAddress', placeholder='email@address', id='loginEmailAddress')
+                input(type='password', name='loginPassword', placeholder='password')
+                #buttons
+                    button(id='signup', style='width:70px;') Login
+                    &nbsp;
+                    button(id='signup', style='width:70px;').signupButton Signup

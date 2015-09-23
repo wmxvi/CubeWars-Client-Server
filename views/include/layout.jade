@@ -1,0 +1,20 @@
+doctype 5
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0, minimal-ui')
+    title
+      | CubeWars - Free browser multiplayer game
+    link(rel='stylesheet', href='/stylesheets/main.css')
+    link(rel='stylesheet', href='/stylesheets/client.css')
+    script(type='text/javascript', src='/javascript/jquery/jquery.min.js')
+    script(type='text/javascript', src='/javascript/lang.js')
+    script(type='text/javascript', src='/javascript/effects.js')
+    script(type='text/javascript', src='/javascript/main.js')
+  body
+    if(errorMessage != '')
+      #message.error=errorMessage
+    if(successMessage != '')
+      #message.success=successMessage
+    block content
+    footer#footer

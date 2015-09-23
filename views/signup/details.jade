@@ -1,0 +1,11 @@
+extends ../include/layout
+block content
+    #container
+        #logo
+        #loginBox
+            form(action='', method='POST', id='form')
+                input(type='email', name='signupEmailAddress', placeholder='New email@address')
+                input(type='text', name='signupUsername', placeholder='New username')
+                input(type='password', name='signupPassword', placeholder='New password')
+                #buttons
+                    button(type='submit', value='Continue') Continue

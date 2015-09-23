@@ -1,0 +1,32 @@
+{
+  "author": "Elmario Husha",
+  "name": "cubewars-client",
+  "description": "cubewars-client",
+  "version": "1.0.0",
+  "dependencies": {
+    "express": "3.3.4",
+    "express-validator": "0.3.0",
+    "connect": "2.8.4",
+    "cookie": "*",
+    "connect-flash": "0.1.1",
+    "util": "0.4.9",
+    "jade": "0.32.0",
+    "underscore": "1.5.1",
+    "underscore.string": "2.2.0-rc",
+    "socket.io": "0.9.16",
+    "redis": "0.8.4",
+    "path": "0.4.9",
+    "nodemailer": "0.5.3",
+    "mysql": "2.0.0-alpha8",
+    "kapitalize": "0.3.3",
+    "i18n": "0.4.1",
+    "gzippo": "0.2.0",
+    "connect-redis": "1.4.5",
+    "bitcoin": "1.7.0"
+  },
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  }
+}
